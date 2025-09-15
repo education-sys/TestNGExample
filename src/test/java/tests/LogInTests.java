@@ -33,5 +33,11 @@ public class LogInTests extends BaseTest {
         logInPage.logInAction("", "");
         assert logInPage.errorMessageDisplayed();
     }
+
+    @Test(groups = {"LogIn"})
+    public void OneCredentialBlank() {
+        logInPage.logInAction("standard_user", "");
+        assert logInPage.errorMessageDisplayed();
+    }
 }
 

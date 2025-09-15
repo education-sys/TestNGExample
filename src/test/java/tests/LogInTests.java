@@ -36,7 +36,7 @@ public class LogInTests extends BaseTest {
 
     @Test(groups = {"LogIn"})
     public void OneCredentialBlank() {
-        logInPage.logInAction("", "secret_sauce");
+        logInPage.logInAction("standard_user", "");
         assert logInPage.errorMessageDisplayed();
     }
 }

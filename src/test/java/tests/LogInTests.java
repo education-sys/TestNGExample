@@ -41,8 +41,8 @@ public class LogInTests extends BaseTest {
     }
 
     @Test(groups = {"LogIn"})
-    public void OneCredentialBlankAAAAAA() {
-        logInPage.logInAction("gsdgsgdsg", "");
+    public void OneCredentialBlankAnotherOK() {
+        logInPage.logInAction("", "tete");
         assert logInPage.errorMessageDisplayed();
     }
 }

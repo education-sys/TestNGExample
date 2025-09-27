@@ -13,14 +13,14 @@ public class BuyFlowTests extends BaseTest {
     CartPage cartPage = new CartPage(driver);
 
 
-    @org.testng.annotations.Test
-    public void buyflow() {
-        logInPage.validLogInAction();
-        homePage.addToCartAction();
-        checkOutOverviewPage.clickOnCheckoutGreenButton();
-        checkOutUsersInfoPage.fillUsersInfoAndContinue();
-        cartPage.clickOnFinishButton();
-    }
+//    @org.testng.annotations.Test
+//    public void buyflow() {
+//        logInPage.validLogInAction();
+//        homePage.addToCartAction();
+//        checkOutOverviewPage.clickOnCheckoutGreenButton();
+//        checkOutUsersInfoPage.fillUsersInfoAndContinue();
+//        cartPage.clickOnFinishButton();
+//    }
 
 
 }

@@ -11,34 +11,32 @@ import pages.LogInPage;
 import java.time.Duration;
 
 public class BaseTest {
-    protected WebDriver driver;
-    protected LogInPage logInPage;
-    protected HomePage homePage;
 
-    @Parameters({"headless"})
-    @BeforeClass(alwaysRun = true)
-    public void beforeAll(@Optional("true") String headless) {
-        ChromeOptions options = new ChromeOptions();
-        if (Boolean.parseBoolean(headless)) {
-            options.addArguments("--headless=new");
-        }
-        driver = new ChromeDriver(options);
+    protected static WebDriver driver;
+
+    @BeforeClass
+    public void beforeClass() {
+        driver = new ChromeDriver();
         driver.manage().window().maximize();
         driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(30));
+//        max time to wait for a page load
         driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(10));
+//        max time for asynchronous JS run
     }
 
-    @Parameters({"baseUrl"})
-    @BeforeMethod(alwaysRun = true)
-    public void openAndWire(String baseUrl) {
-        driver.get(baseUrl);
-        logInPage = new LogInPage(driver);
-        homePage  = new HomePage(driver);
+    @BeforeMethod
+    public void setUp() {
+        driver.get("https://www.saucedemo.com/");
     }
 
-    @AfterClass(alwaysRun = true)
-    public void afterAll() {
-            driver.quit();
+    @AfterMethod
+    public void tearDown() {
+        driver.manage().deleteAllCookies();
+    }
+
+    @AfterClass
+    public void afterClass() {
+        driver.quit();
     }
 }
 

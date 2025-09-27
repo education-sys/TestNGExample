@@ -2,10 +2,7 @@ name: Selenium TestNG (14:00 Europe/Belgrade)
 
 on:
   schedule:
-    # Summer time (CEST, UTC+2) → run at 12:00 UTC
-    - cron: '0 12 * 4-10 *'
-    # Winter time (CET, UTC+1) → run at 13:00 UTC
-    - cron: '0 13 * 1-3,11-12 *'
+    - cron: "20 13 * * *"   # 13:20 UTC = 15:20 Serbia
   workflow_dispatch: {}
 
 jobs:

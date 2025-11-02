@@ -1,10 +1,5 @@
 name: Selenium TestNG (14:00 Europe/Belgrade)
 
-on:
-  schedule:
-    - cron: "20 13 * * *"   # 13:20 UTC = 15:20 Serbia
-  workflow_dispatch: {}
-
 jobs:
   test:
     runs-on: ubuntu-latest

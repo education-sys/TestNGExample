@@ -15,8 +15,6 @@ public class CartPage extends BasePage {
         driver.findElement(finishButton).click();
     }
 
-    tripleA
-
 
 
 

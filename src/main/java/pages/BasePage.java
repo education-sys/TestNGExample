@@ -11,9 +11,5 @@ public class BasePage {
         this.driver = driver;
     }
 
-    public void example(){
-        System.out.println("Dodat nov kod");
-    }
-
 }
 

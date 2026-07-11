@@ -7,6 +7,7 @@ public class HomePage extends BasePage {
 
     private By addToCartButton = By.name("add-to-cart-sauce-labs-backpack");
     private By shopingCartIcon = By.id("shopping_cart_container");
+    private By locator = By.id("locator");
 
     public HomePage(WebDriver driver) {
         super(driver);

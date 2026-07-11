@@ -13,7 +13,7 @@ public class LogInTests extends BaseTest {
 
     @Test
     public void invalidUserNameValidPassword() {
-        logInPage.logInAction("fklsajkl", "secret_sauce");
+        logInPage.logInAction("username", "secret_sauce");
         assert logInPage.errorMessageDisplayed();
     }
 
